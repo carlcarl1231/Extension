@@ -1,6 +1,7 @@
 <?php include 'header.php'; ?>
 
 <!-- Heading -->
+
 <div class="">
     <a href="add_file.php?page=moa"><button type="button" class="btn btn-success"><i class="fas fa-file-medical"></i> Add File</button></a>
 </div>
@@ -104,6 +105,14 @@
 </script>
 
 <?php include 'footer.php'; ?>
+
+
+<style>
+.col-md-12 {
+    background-color: ;
+}
+
+</style>
 
 </body>
 </html>

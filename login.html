@@ -26,12 +26,21 @@
         z-index: 9999;
         background: url('img/sksulogo.png') 50% 50% no-repeat rgb(249,249,249);
         opacity: 1;
+
+   
     }
+ </style>
+
+ <style>
+.body {
+  background: url('./img/side.jpg') no-repeat;
+  background-size: cover; 
+}
  </style>
 </head>
 
-<body style="padding:0px; margin:0px; background-color:#fff;font-family:arial,helvetica,sans-serif,verdana,'Open Sans'">
-
+<!--<body class="body" style="padding:0px; margin:0px; background-color:#fff;font-family:arial,helvetica,sans-serif,verdana,'Open Sans'">-->
+  <body class="body">
   <!-- Start your project here-->
 <!--Navbar -->
 <nav class="mb-1 navbar navbar-expand-lg navbar-dark bg-success">
@@ -52,15 +61,16 @@
         <a class="nav-link" href="#">
           <i class="fab fa-instagram"></i> Instagram</a>
       </li> -->
-  <!--     <li class="nav-item dropdown">
+    <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown"
           aria-haspopup="true" aria-expanded="false">
-          <i class="fas fa-user"></i> Login </a>
+          <i class="fas fa-bars"></i> More </a>
         <div class="dropdown-menu dropdown-menu-right dropdown-info" aria-labelledby="navbarDropdownMenuLink-4">
-          <a class="dropdown-item" href="#">Login</a>
+          <a class="dropdown-item" href="./Private_Dashboard/index.html"><i class="fas fa-chalkboard-teacher"></i>Admin</a>
+          <a class="dropdown-item" href="./index.html"><i class="fas fa-home"></i>Home</a>
 
         </div>
-      </li> -->
+      </li>
     </ul>
   </div>
 </nav>

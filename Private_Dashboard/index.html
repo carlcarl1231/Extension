@@ -5,7 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Material Design Bootstrap</title>
+    <title>Admin Login</title>
+    <link rel="shortcut icon" type="x-icon" href="../img/sksulogo.png">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
     <!-- Bootstrap core CSS -->
@@ -44,10 +45,14 @@
             padding-top: 70px; /* Adjust padding to ensure content is below the navbar */
             z-index: 1; /* Ensure content is above the background */
         }
+        .body {
+            background: url('../img/side.jpg') no-repeat;
+            background-size: cover; 
+        }
     </style>
 </head>
 
-<body>
+<body class="body">
 
     <!-- Full-size background -->
     <div class="full-background"></div>
@@ -55,7 +60,7 @@
     <!-- Navbar -->
     <nav class="mb-1 navbar navbar-expand-lg navbar-dark">
         <a class="navbar-brand" href="#">
-            <img src="js/img/Files_Download.png" width="33px" height="33px" alt="Logo"> File Management System
+            <img src="../img/sksulogo.png" width="33px" height="33px" alt="Logo">SKSU Extension Office
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4"
             aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
@@ -65,6 +70,14 @@
             <ul class="navbar-nav ml-auto">
               
                 <!-- Add more navbar items as needed -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">
+                      <i class="fas fa-bars"></i> More </a>
+                    <div class="dropdown-menu dropdown-menu-right dropdown-info" aria-labelledby="navbarDropdownMenuLink-4">
+                      <a class="dropdown-item" href="../login.html"><i class="fas fa-user-circle"></i>Login User</a>
+                      <a class="dropdown-item" href="../index.html"><i class="fas fa-home"></i>Home</a>
+            
             </ul>
         </div>
     </nav>

@@ -36,7 +36,7 @@
              
                      
                     ?>
-                <CENTER><h3 class="page-header" >Count Per Upload File of an Employee  </h3></CENTER>  
+                <CENTER><h3 class="page-header" >Document</h3></CENTER>  
       
 
               <canvas id="myChart"></canvas>

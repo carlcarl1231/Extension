@@ -16,6 +16,7 @@ header('Location: index.html');
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>Extension Office</title>
+  <link rel="shortcut icon" type="x-icon" href="../img/sksulogo.png">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
   <!-- Bootstrap core CSS -->
@@ -45,6 +46,7 @@ header('Location: index.html');
 /* Custom styles for nested dropdown */
 .dropdown-submenu {
     position: relative;
+
 }
 
 .dropdown-submenu .dropdown-menu {
@@ -53,6 +55,9 @@ header('Location: index.html');
     margin-top: -6px;
     margin-left: 0;
     display: none;
+    color: white;
+    
+    
 }
 
 .dropdown-submenu:hover .dropdown-menu {
@@ -82,20 +87,47 @@ width:100%;
 position:absolute;
 }
 .navbar-nav {
-background-color: rgb(36, 133, 42);
+background-color: #009a3c;
 }
+
+.dropdown-item {
+  background-color: #009a3c;
+  color: white;
+}
+.dropdown-item:hover {
+  background-color: #fffe00;
+  color: black;
+  font-weight: 700; color: 
+}
+
 .sidebar {
-background-color: rgb(115, 229, 63); 
+  background: url('../img/side1.jpg') no-repeat;
+  background-size: cover;
+}
+.bg-style{
+  background: url('../img/bg1.avif') no-repeat;
+  background-size: cover;
 }
 .navbar-bg {
-background-color: rgb(36, 133, 42) ;
+background-color:  #009a3c;
 }
 .dropdown-menu {
-background-color: rgb(36, 133, 42) ;
+background-color:  #009a3c;
 }
-.dropdown-menu:hover {
-color: yellow;
+
+.list-group-item {
+background-color:  #009a3c;  
+color: white;
+
 }
+.list-group-item:hover{
+background-color: #fffe00;
+color: black;
+font-weight: 700;
+}
+
+
+
 
 .fontcolor-nav-top {
 color: yellow;
@@ -107,7 +139,7 @@ color: yellow;
         width: 100%;
         height: 100%;
         z-index: 9999;
-        background: url('img/sksulogo.png') 50% 50% no-repeat rgb(249,249,249);
+        background: url('../img/sksulogo.png') 50% 50% no-repeat rgb(249,249,249);
         opacity: 1;
     }
 
@@ -126,7 +158,7 @@ color: yellow;
 </script>
 </head>
 
-<body class="grey lighten-3">
+<body class="grey lighten-3 bg-style">
 
   <!--Main Navigation-->
   <header>
@@ -168,8 +200,8 @@ color: yellow;
               <a class="nav-link waves-effect" href="#">Free
                 tutorials</a>
             </li> -->
-            <ul class="nav-item dropdown fontcolor-nav-top">
-        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false" style="color: white; font-weight: 500;">RD&E</a>
+            <ul class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">RD&E</a>
 
 								<div class="dropdown-menu ">
 									<a class="dropdown-item " href="manual_operations.php">*MANUAL OF OPERATIONS (SKSU)</a>
@@ -188,14 +220,14 @@ color: yellow;
 </ul>
 
               <ul class="nav-item dropdown">
-								<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false" style="color: white; font-weight: 500;"><b>Agenda</b></a>
+								<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">Agenda</a>
 								<div class="dropdown-menu">
 									<a class="dropdown-item" href="university_agenda.php">*University Agenda</a>
                 </div>
 </ul>
 
         <ul class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false" style="color: white; font-weight: 500;"><b>Colleges</b></a>
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">Colleges</a>
                     <div class="dropdown-menu">
                         <div class="dropdown-submenu">
                             <a class="dropdown-item dropdown-toggle" href="#">*Engineering</a>
@@ -251,7 +283,7 @@ color: yellow;
 </ul>
 
               <ul class="nav-item dropdown">
-								<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false" style="color: white; font-weight: 500;"><b>MOA</b></a>
+								<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">MOA</a>
 								<div class="dropdown-menu">
 									<a class="dropdown-item" href="moa.php">*MOA</a>
                   <div class="dropdown-submenu">
@@ -337,8 +369,7 @@ color: yellow;
           <i class="fas fa-chalkboard-teacher"></i> Admin logged</a>
               <a href="user_log.php" class="list-group-item list-group-item-action waves-effect">
           <i class="fas fa-chalkboard-teacher"></i> User logged</a>
-        <a href="#" class="list-group-item list-group-item-action waves-effect">
-          <i class="fas fa-money-bill-alt mr-3"></i>Orders</a>
+
           </div>
           </li>
 <li class="nav-item dropdown">
@@ -346,8 +377,8 @@ color: yellow;
           aria-haspopup="true" aria-expanded="false" style="color: white;">
            <i class="fas fa-user-circle" ></i> Account </a>
         <div class="dropdown-menu dropdown-menu-right dropdown-info" aria-labelledby="navbarDropdownMenuLink-4">
-          <a class="dropdown-item" href="login.html"><i class="fas fa-user-circle"></i> Login User</a>
-          <a class="dropdown-item" href="./Private_Dashboard/index.html"> <i class="fas fa-chalkboard-teacher"></i> Signout</a>
+          <a class="dropdown-item" href="../login.html"><i class="fas fa-user-circle"></i> Login User</a>
+          <a class="dropdown-item" href="logout.php"> <i class="fas fa-chalkboard-teacher"></i> Signout</a>
         </div>
       </li>
 
@@ -358,6 +389,7 @@ color: yellow;
     <!-- Navbar -->
 
     <!-- Sidebar -->
+
     <div class="sidebar-fixed position-fixed sidebar">
 
       <a class="logo-wrapper waves-effect">
@@ -366,134 +398,22 @@ color: yellow;
       </a>
 
        <div class="list-group list-group-flush">
-       <a href="dashboard.php" class="list-group-item active waves-effect" style="background-color: green; color: white;">
-  <i class="fas fa-chart-pie mr-3"></i>Dashboard
-</a>
-
-        <ul class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle fontcolor1" href="#" role="button" data-toggle="dropdown" aria-expanded="false""><b>RD&E</b></a>
-
-								<div class="dropdown-menu">
-									<a class="dropdown-item " href="manual_operations.php">*MANUAL OF OPERATIONS (SKSU)</a>
-                  <div class="dropdown-submenu">
-									<a class="dropdown-item dropdown-toggle" href="#">*NEDA</a>
-                  <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="proposal_format.php">Proposal Format</a>
-                                        <a class="dropdown-item" href="post_format.php">Post Format</a>
-                                        <a class="dropdown-item" href="progress_report.php">Progress Report</a>
-                                    </div>
-                </div>
-									<a class="dropdown-item" href="regional.php">*Regional</a>
-									<div class="dropdown-divider"></div>
-									<a class="dropdown-item" href="other_files">Other Files</a>
-								</div>
-</ul>
-
-              <ul class="nav-item dropdown">
-								<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false"><b>Agenda</b></a>
-								<div class="dropdown-menu">
-									<a class="dropdown-item" href="university_agenda.php">*University Agenda</a>
-                </div>
-</ul>
-
-        <ul class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false"><b>Colleges</b></a>
-                    <div class="dropdown-menu">
-                        <div class="dropdown-submenu">
-                            <a class="dropdown-item dropdown-toggle" href="#">*Engineering</a>
-                            <div class="dropdown-menu">
-                                <!-- <a class="dropdown-item" href="#">COE File 1</a>
-                                <a class="dropdown-item" href="#">COE File 2</a> -->
-                                <a class="dropdown-item" href="engineering_agenda.php">Agenda</a>
-                                <div class="dropdown-submenu">
-                                    <a class="dropdown-item dropdown-toggle" href="#">Projects/Activities</a>
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="ce_projects.php">CE</a>
-                                        <a class="dropdown-item" href="cpe_projects.php">CpE</a>
-                                        <a class="dropdown-item" href="ece_projects.php">ECE</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="dropdown-submenu">
-                            <a class="dropdown-item dropdown-toggle" href="#">*CCS</a>
-                            <div class="dropdown-menu">
-                                <!-- <a class="dropdown-item" href="#">CCS File 1</a>
-                                <a class="dropdown-item" href="#">CCS File 2</a> -->
-                                <a class="dropdown-item" href="ccs_agenda.php">Agenda</a>
-                                <div class="dropdown-submenu">
-                                    <a class="dropdown-item dropdown-toggle" href="#">Projects/Activities</a>
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="cs_projects.php">CS</a>
-                                        <a class="dropdown-item" href="it_projects.php">IT</a>
-                                        <a class="dropdown-item" href="is_projects.php">IS</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="dropdown-submenu">
-                            <a class="dropdown-item dropdown-toggle" href="#">*NABA</a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="industech_agenda.php">Agenda</a>
-                                <div class="dropdown-submenu">
-                                    <a class="dropdown-item dropdown-toggle" href="#">Projects/Activities</a>
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="fsm_projects.php">FSM/Culinary</a>
-                                        <a class="dropdown-item" href="electronics_projects.php">Electronics</a>
-                                        <a class="dropdown-item" href="electrical_projects.php">Electrical</a>
-                                        <a class="dropdown-item" href="automotive_projects.php">Automotive</a>
-                                        <a class="dropdown-item" href="drafting_projects.php">Drafting</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Other Files</a>
-                    </div>
-</ul>
-
-              <ul class="nav-item dropdown">
-								<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false"><b>MOA</b></a>
-								<div class="dropdown-menu">
-									<a class="dropdown-item" href="moa.php">*MOA</a>
-                  <div class="dropdown-submenu">
-									<a class="dropdown-item dropdown-toggle" href="#">*Budgetary</a>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="ppmp.php">PPMP</a>
-                  </div>
-                </div>
-                <div class="dropdown-submenu">
-									<a class="dropdown-item dropdown-toggle" href="naba.php">*Pool of Experts</a>
-                  <div class="dropdown-menu">
-                  <a class="dropdown-item" href="engineering_pool.php">Engineering</a>
-                  <a class="dropdown-item" href="ccs_pool.php">CCS</a>
-                  <a class="dropdown-item" href="industech_pool.php">NABA</a>
-              </div>
-                </div>
-									<div class="dropdown-divider"></div>
-									<a class="dropdown-item" href="#">Other Files</a>
-								</div>
-</ul>
-
-<!--              
-         <a href="#" class="list-group-item list-group-item-action waves-effect"  data-toggle="modal" data-target="#modalRegisterForm">
-          <i class="fas fa-user mr-3"></i>Add Admin</a>
-            <a href="view_admin.php" class="list-group-item list-group-item-action waves-effect">
+           <a href="dashboard.php" class="list-group-item active waves-effect"><i class="fas fa-home"></i> Home</a>
+           <a href="" class="list-group-item list-group-item-action waves-effect " >
+           <i class="fas fa-chalkboard-teacher"></i> About</a>
+           <a href="view_admin.php" class="list-group-item list-group-item-action waves-effect" > 
           <i class="fas fa-users"></i> View Admin</a>
-        <a href="#" class="list-group-item list-group-item-action waves-effect" data-toggle="modal" data-target="#modalRegisterForm2">
-          <i class="fas fa-user mr-3"></i>Add User</a>
-           <a href="view_user.php" class="list-group-item list-group-item-action waves-effect">
+           <a href="view_user.php" class="list-group-item list-group-item-action waves-effect" >
           <i class="fas fa-users"></i>  View User</a>
-        <a href="add_document.php" class="list-group-item list-group-item-action waves-effect">
+        <a href="add_document.php" class="list-group-item list-group-item-action waves-effect" >
           <i class="fas fa-file-medical"></i> Add Document</a>
-        <a href="view_userfile.php" class="list-group-item list-group-item-action waves-effect">
+        <a href="view_userfile.php" class="list-group-item list-group-item-action waves-effect" >
           <i class="fas fa-folder-open"></i> View User File</a>
-            <a href="admin_log.php" class="list-group-item list-group-item-action waves-effect">
+            <a href="admin_log.php" class="list-group-item list-group-item-action waves-effect" >
           <i class="fas fa-chalkboard-teacher"></i> Admin logged</a>
-              <a href="user_log.php" class="list-group-item list-group-item-action waves-effect">
+              <a href="user_log.php" class="list-group-item list-group-item-action waves-effect" >
           <i class="fas fa-chalkboard-teacher"></i> User logged</a>
-        <a href="#" class="list-group-item list-group-item-action waves-effect">
-          <i class="fas fa-money-bill-alt mr-3"></i>Orders</a> -->
+
       </div>
 
     </div>
