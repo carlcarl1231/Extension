@@ -81,6 +81,25 @@ height:100%;
 width:100%;
 position:absolute;
 }
+.navbar-nav {
+background-color: rgb(36, 133, 42);
+}
+.sidebar {
+background-color: rgb(115, 229, 63); 
+}
+.navbar-bg {
+background-color: rgb(36, 133, 42) ;
+}
+.dropdown-menu {
+background-color: rgb(36, 133, 42) ;
+}
+.dropdown-menu:hover {
+color: yellow;
+}
+
+.fontcolor-nav-top {
+color: yellow;
+}
 #loader{
         position: fixed;
         left: 0px;
@@ -88,9 +107,10 @@ position:absolute;
         width: 100%;
         height: 100%;
         z-index: 9999;
-        background: url('sksulogo.png') 50% 50% no-repeat rgb(249,249,249);
+        background: url('img/sksulogo.png') 50% 50% no-repeat rgb(249,249,249);
         opacity: 1;
     }
+
   </style>
 
     <script src="jquery.min.js"></script>
@@ -112,7 +132,7 @@ position:absolute;
   <header>
 
     <!-- Navbar -->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light navbar-bg scrolling-navbar">
       <div class="container-fluid">
 
         <!-- Brand -->
@@ -148,7 +168,113 @@ position:absolute;
               <a class="nav-link waves-effect" href="#">Free
                 tutorials</a>
             </li> -->
+            <ul class="nav-item dropdown fontcolor-nav-top">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false" style="color: white; font-weight: 500;">RD&E</a>
+
+								<div class="dropdown-menu ">
+									<a class="dropdown-item " href="manual_operations.php">*MANUAL OF OPERATIONS (SKSU)</a>
+                  <div class="dropdown-submenu">
+									<a class="dropdown-item dropdown-toggle" href="#">*NEDA</a>
+                  <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="proposal_format.php">Proposal Format</a>
+                                        <a class="dropdown-item" href="post_format.php">Post Format</a>
+                                        <a class="dropdown-item" href="progress_report.php">Progress Report</a>
+                                    </div>
+                </div>
+									<a class="dropdown-item" href="regional.php">*Regional</a>
+									<div class="dropdown-divider"></div>
+									<a class="dropdown-item" href="other_files">Other Files</a>
+								</div>
+</ul>
+
+              <ul class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false" style="color: white; font-weight: 500;"><b>Agenda</b></a>
+								<div class="dropdown-menu">
+									<a class="dropdown-item" href="university_agenda.php">*University Agenda</a>
+                </div>
+</ul>
+
+        <ul class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false" style="color: white; font-weight: 500;"><b>Colleges</b></a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" href="#">*Engineering</a>
+                            <div class="dropdown-menu">
+                                <!-- <a class="dropdown-item" href="#">COE File 1</a>
+                                <a class="dropdown-item" href="#">COE File 2</a> -->
+                                <a class="dropdown-item" href="engineering_agenda.php">Agenda</a>
+                                <div class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle" href="#">Projects/Activities</a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="ce_projects.php">CE</a>
+                                        <a class="dropdown-item" href="cpe_projects.php">CpE</a>
+                                        <a class="dropdown-item" href="ece_projects.php">ECE</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" href="#">*CCS</a>
+                            <div class="dropdown-menu">
+                                <!-- <a class="dropdown-item" href="#">CCS File 1</a>
+                                <a class="dropdown-item" href="#">CCS File 2</a> -->
+                                <a class="dropdown-item" href="ccs_agenda.php">Agenda</a>
+                                <div class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle" href="#">Projects/Activities</a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="cs_projects.php">CS</a>
+                                        <a class="dropdown-item" href="it_projects.php">IT</a>
+                                        <a class="dropdown-item" href="is_projects.php">IS</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" href="#">*NABA</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="industech_agenda.php">Agenda</a>
+                                <div class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle" href="#">Projects/Activities</a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="fsm_projects.php">FSM/Culinary</a>
+                                        <a class="dropdown-item" href="electronics_projects.php">Electronics</a>
+                                        <a class="dropdown-item" href="electrical_projects.php">Electrical</a>
+                                        <a class="dropdown-item" href="automotive_projects.php">Automotive</a>
+                                        <a class="dropdown-item" href="drafting_projects.php">Drafting</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Other Files</a>
+                    </div>
+</ul>
+
+              <ul class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false" style="color: white; font-weight: 500;"><b>MOA</b></a>
+								<div class="dropdown-menu">
+									<a class="dropdown-item" href="moa.php">*MOA</a>
+                  <div class="dropdown-submenu">
+									<a class="dropdown-item dropdown-toggle" href="#">*Budgetary</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="ppmp.php">PPMP</a>
+                  </div>
+                </div>
+                <div class="dropdown-submenu">
+									<a class="dropdown-item dropdown-toggle" href="naba.php">*Pool of Experts</a>
+                  <div class="dropdown-menu">
+                  <a class="dropdown-item" href="engineering_pool.php">Engineering</a>
+                  <a class="dropdown-item" href="ccs_pool.php">CCS</a>
+                  <a class="dropdown-item" href="industech_pool.php">NABA</a>
+              </div>
+                </div>
+									<div class="dropdown-divider"></div>
+									<a class="dropdown-item" href="#">Other Files</a>
+								</div>
+</ul>
+
           </ul>
+
             <?php 
 
              require_once("include/connection.php");
@@ -168,9 +294,11 @@ position:absolute;
             ?>
 
           <!-- Right -->
-          <ul class="navbar-nav nav-flex-icons" style="background-color: green;">
-  <li style="margin-top: 10px; color: white;">Welcome!, <?php echo ucwords(htmlentities($id)); ?></li>
+          <ul class="navbar-nav nav-flex-icons"">
+  <li style="margin-top: 10px; color: white;"> <?php echo ucwords(htmlentities($id)); ?></li>
   <li class="nav-item">
+
+<!--
     <a href="#" class="nav-link waves-effect" target="_blank" style="color: white;">
       <i class="fab fa-facebook-f"></i>
     </a>
@@ -180,13 +308,48 @@ position:absolute;
       <i class="fab fa-twitter"></i>
     </a>
   </li>
-  <li class="nav-item">
-    <a href="logout.php" class="nav-link border border-light rounded waves-effect" style="color: white;">
-      <i class="far fa-user-circle"></i>SignOut
-    </a>
-  </li>
-</ul>
-
+-->
+<!--
+<li class="nav-item dropdown ">
+                    <a class="nav-link dropdown-toggle waves-effect" href="#" role="button" data-toggle="dropdown" aria-expanded="false"><b>Account</b></a>
+                    <div class="dropdown-menu">
+                      <a href="logout.php" class="nav-link border border-light rounded waves-effect""><i class="far fa-user-circle"></i>Signout</a>
+</li>
+-->
+<li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false" style="color: white;">
+           <i class="fas fa-user-bar" ></i> Menu </a>
+        <div class="dropdown-menu dropdown-menu-right dropdown-info" aria-labelledby="navbarDropdownMenuLink-4">
+        <a href="#" class="list-group-item list-group-item-action waves-effect"  data-toggle="modal" data-target="#modalRegisterForm">
+          <i class="fas fa-user mr-3"></i>Add Admin</a>
+            <a href="view_admin.php" class="list-group-item list-group-item-action waves-effect">
+          <i class="fas fa-users"></i> View Admin</a>
+        <a href="#" class="list-group-item list-group-item-action waves-effect" data-toggle="modal" data-target="#modalRegisterForm2">
+          <i class="fas fa-user mr-3"></i>Add User</a>
+           <a href="view_user.php" class="list-group-item list-group-item-action waves-effect">
+          <i class="fas fa-users"></i>  View User</a>
+        <a href="add_document.php" class="list-group-item list-group-item-action waves-effect">
+          <i class="fas fa-file-medical"></i> Add Document</a>
+        <a href="view_userfile.php" class="list-group-item list-group-item-action waves-effect">
+          <i class="fas fa-folder-open"></i> View User File</a>
+            <a href="admin_log.php" class="list-group-item list-group-item-action waves-effect">
+          <i class="fas fa-chalkboard-teacher"></i> Admin logged</a>
+              <a href="user_log.php" class="list-group-item list-group-item-action waves-effect">
+          <i class="fas fa-chalkboard-teacher"></i> User logged</a>
+        <a href="#" class="list-group-item list-group-item-action waves-effect">
+          <i class="fas fa-money-bill-alt mr-3"></i>Orders</a>
+          </div>
+          </li>
+<li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false" style="color: white;">
+           <i class="fas fa-user-circle" ></i> Account </a>
+        <div class="dropdown-menu dropdown-menu-right dropdown-info" aria-labelledby="navbarDropdownMenuLink-4">
+          <a class="dropdown-item" href="login.html"><i class="fas fa-user-circle"></i> Login User</a>
+          <a class="dropdown-item" href="./Private_Dashboard/index.html"> <i class="fas fa-chalkboard-teacher"></i> Signout</a>
+        </div>
+      </li>
 
         </div>
 
@@ -195,7 +358,7 @@ position:absolute;
     <!-- Navbar -->
 
     <!-- Sidebar -->
-    <div class="sidebar-fixed position-fixed">
+    <div class="sidebar-fixed position-fixed sidebar">
 
       <a class="logo-wrapper waves-effect">
       
@@ -207,8 +370,8 @@ position:absolute;
   <i class="fas fa-chart-pie mr-3"></i>Dashboard
 </a>
 
-        <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false" style="color: green;"><b>RD&E</b></a>
+        <ul class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle fontcolor1" href="#" role="button" data-toggle="dropdown" aria-expanded="false""><b>RD&E</b></a>
 
 								<div class="dropdown-menu">
 									<a class="dropdown-item " href="manual_operations.php">*MANUAL OF OPERATIONS (SKSU)</a>
@@ -224,15 +387,16 @@ position:absolute;
 									<div class="dropdown-divider"></div>
 									<a class="dropdown-item" href="other_files">Other Files</a>
 								</div>
-              </li>
+</ul>
 
-              <li class="nav-item dropdown">
+              <ul class="nav-item dropdown">
 								<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false"><b>Agenda</b></a>
 								<div class="dropdown-menu">
 									<a class="dropdown-item" href="university_agenda.php">*University Agenda</a>
                 </div>
-              </li>
-        <li class="nav-item dropdown">
+</ul>
+
+        <ul class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false"><b>Colleges</b></a>
                     <div class="dropdown-menu">
                         <div class="dropdown-submenu">
@@ -286,8 +450,9 @@ position:absolute;
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">Other Files</a>
                     </div>
-                </li>
-              <li class="nav-item dropdown">
+</ul>
+
+              <ul class="nav-item dropdown">
 								<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false"><b>MOA</b></a>
 								<div class="dropdown-menu">
 									<a class="dropdown-item" href="moa.php">*MOA</a>
@@ -308,8 +473,9 @@ position:absolute;
 									<div class="dropdown-divider"></div>
 									<a class="dropdown-item" href="#">Other Files</a>
 								</div>
-							</li>
-              
+</ul>
+
+<!--              
          <a href="#" class="list-group-item list-group-item-action waves-effect"  data-toggle="modal" data-target="#modalRegisterForm">
           <i class="fas fa-user mr-3"></i>Add Admin</a>
             <a href="view_admin.php" class="list-group-item list-group-item-action waves-effect">
@@ -326,7 +492,7 @@ position:absolute;
           <i class="fas fa-chalkboard-teacher"></i> Admin logged</a>
               <a href="user_log.php" class="list-group-item list-group-item-action waves-effect">
           <i class="fas fa-chalkboard-teacher"></i> User logged</a>
-    <!--     <a href="#" class="list-group-item list-group-item-action waves-effect">
+        <a href="#" class="list-group-item list-group-item-action waves-effect">
           <i class="fas fa-money-bill-alt mr-3"></i>Orders</a> -->
       </div>
 
