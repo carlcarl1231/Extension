@@ -2,185 +2,155 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Admin Login</title>
-  <link rel="shortcut icon" type="x-icon" href="../img/sksulogo.png">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
-  <!-- Bootstrap core CSS -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <!-- Material Design Bootstrap -->
-  <link href="css/mdb.min.css" rel="stylesheet">
-  <!-- Your custom styles (optional) -->
-  <link href="css/style.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Material Design Bootstrap</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.css" rel="stylesheet">
 
-  <style type="text/css">
-      body{
-       background-image: url("img/honey_im_subtle.png");
-      }
-        #loader{
-        position: fixed;
-        left: 0px;
-        top: 0px;
-        width: 100%;
-        height: 100%;
-        z-index: 9999;
-        background: url('../img/sksulogo.png') 50% 50% no-repeat rgb(249,249,249);
-        opacity: 1;
-    }
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
 
+        .full-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 90%;
+            background-image: url('../img/graduates.jpg'); /* Replace with your background image */
+            background-size: cover;
+            background-position: center;
+            z-index: -1; /* Ensure it's behind other content */
+        }
+
+        .navbar {
+            background-color: green;
+            color: white;
+            z-index: 2; /* Ensure navbar is above the background */
+        }
+
+        .content {
+            padding-top: 70px; /* Adjust padding to ensure content is below the navbar */
+            z-index: 1; /* Ensure content is above the background */
+        }
     </style>
 </head>
 
-<body style="padding:0px; margin:0px; background-color:#fff;font-family:arial,helvetica,sans-serif,verdana,'Open Sans'">
+<body>
 
-  <!-- Start your project here-->
-<!--Navbar -->
-<nav class="mb-1 navbar navbar-expand-lg navbar-dark bg-success">
-    <a class="navbar-brand" href="../index.html"><img src="../img/sksulogo.png" width="33px" height="33px"> <font color="#FFFF00">SKSU EXTENSION OFFICE MANAGEMENT SYSTEM</font></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4"
-    aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
-    <ul class="navbar-nav ml-auto">
-      <!-- <li class="nav-item active">
-        <a class="nav-link" href="#">
-          <i class="fab fa-facebook-f"></i> Facebook
-          <span class="sr-only">(current)</span>
+    <!-- Full-size background -->
+    <div class="full-background"></div>
+
+    <!-- Navbar -->
+    <nav class="mb-1 navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">
+            <img src="js/img/Files_Download.png" width="33px" height="33px" alt="Logo"> File Management System
         </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">
-          <i class="fab fa-instagram"></i> Instagram</a>
-      </li> -->
-  <!--     <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown"
-          aria-haspopup="true" aria-expanded="false">
-          <i class="fas fa-user"></i> Login </a>
-        <div class="dropdown-menu dropdown-menu-right dropdown-info" aria-labelledby="navbarDropdownMenuLink-4">
-          <a class="dropdown-item" href="#">Login</a>
-
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4"
+            aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
+            <ul class="navbar-nav ml-auto">
+              
+                <!-- Add more navbar items as needed -->
+            </ul>
         </div>
-      </li> -->
-    </ul>
-  </div>
-</nav>
-<!--/.Navbar -->
-<br><Br>
-<!-- Card -->
-<div class="container col-md-5">
- <!-- Card -->
-<div class="card">
- <div id="loader"></div>
-    <!-- Card body -->
-    <div class="card-body">
+    </nav>
+    <!-- /.Navbar -->
 
-        <!-- Material form register -->
-        <form action="admin_login.php" method="POST">
-            <p class="h4 text-center py-4">ADMIN SECURITY</p>
+    <!-- Content -->
+    <div class="content">
+        <!-- Your existing content goes here -->
+        <div class="container col-md-5">
+            <div class="card">
+                <!-- Card body -->
+                <div class="card-body">
+                    <form action="admin_login.php" method="POST">
+                        <p class="h4 text-center py-4">ADMIN SECURITY</p>
 
-            <!-- Material input text -->
+                        <div class="md-form">
+                            <i class="fa fa-envelope prefix grey-text"></i>
+                            <input type="email" id="materialFormCardEmailEx" name="admin_user" class="form-control">
+                            <label for="materialFormCardEmailEx" class="font-weight-light">Your email</label>
+                        </div>
 
-            <div class="md-form">
-                <i class="fa fa-envelope prefix grey-text"></i>
-                <input type="email" id="materialFormCardEmailEx" name="admin_user" class="form-control" >
-                <label for="materialFormCardEmailEx" class="font-weight-light">Your email</label>
+                        <div class="md-form">
+                            <i class="fa fa-lock prefix grey-text"></i>
+                            <input type="password" id="materialFormCardPasswordEx" name="admin_password"
+                                class="form-control">
+                            <label for="materialFormCardPasswordEx" class="font-weight-light">Your password</label>
+                        </div>
+
+                        <div class="text-center py-4 mt-3">
+                            <button class="btn btn-lg btn-block" name="adminlog" id="login" type="submit"
+                                style="background-color: green; color: white;">
+                                Sign In
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <!-- Card body -->
             </div>
-            <!-- Material input password -->
-            <div class="md-form">
-                <i class="fa fa-lock prefix grey-text"></i>
-                <input type="password" id="materialFormCardPasswordEx" name="admin_password" class="form-control">
-                <label for="materialFormCardPasswordEx" class="font-weight-light">Your password</label>
-            </div>
+            <!-- Card -->
+        </div>
 
-            <div class="text-center py-4 mt-3">
-                <button class="btn btn-warning btn-lg btn-block" name = "adminlog" id="login" type="submit">Sign In</button>
-            </div>
-      
-
-        </form>
-        <!-- Material form register -->
-
+        <footer class="text-center py-4 mt-3" style="background-color: green; color: white; margin-left: 30%; margin-right: 30%; border-radius: 4px; margin-bottom: 5px;">
+            <p>All right Reserved &copy; <?php echo date('Y');?> Developed By: Tundag & Franco</p>
+        </footer>
     </div>
+    <!-- /.Content -->
 
-    <!-- Card body -->
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.4.0.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <script type="text/javascript">
+        $("#login").on("click", function () {
+            uservalidate();
+            passvalidate();
 
-</div>
-<!-- Card --></div>
-       <footer class="text-center py-4 mt-3" style="background-color: rgb(206, 209, 154);margin-left: 30%;margin-right: 30%;border-radius:4px;    margin-bottom: 5px;">
-                <p>All right Reserved &copy; <?php echo date('Y');?> Developed By:Tundag & Franco</p>
-            </footer>
-<!-- Card -->
-  <!-- /Start your project here-->
+            if (uservalidate() === true && passvalidate() === true) {
+                // Continue with the form submission
+            };
+        });
 
-  <!-- SCRIPTS -->
-  <!-- JQuery -->
-  <script type="text/javascript" src="js/jquery-3.4.0.min.js"></script>
-  <!-- Bootstrap tooltips -->
-  <script type="text/javascript" src="js/popper.min.js"></script>
-  <!-- Bootstrap core JavaScript -->
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>
-  <!-- MDB core JavaScript -->
-  <script type="text/javascript" src="js/mdb.min.js"></script>
+        function uservalidate() {
+            if ($('#materialFormCardEmailEx').val() == '') {
+                $('#materialFormCardEmailEx').css('border-color', '#dc3545');
+                return false;
+            } else {
+                $('#materialFormCardEmailEx').css('border-color', '#28a745');
+                return true;
+            }
+        };
+
+        function passvalidate() {
+            if ($('#materialFormCardPasswordEx').val() == '') {
+                $('#materialFormCardPasswordEx').css('border-color', '#dc3545');
+                return false;
+            } else {
+                $('#materialFormCardPasswordEx').css('border-color', '#28a745');
+                return true;
+            }
+        };
+    </script>
 </body>
 
-<script type="text/javascript">
-   $("#login").on("click", function () {
-   
-          uservalidate();
-          passvalidate();
-   
-         if (uservalidate() === true
-          && passvalidate() === true
-   
-          ) {
-   
-   };
-   
-   
-   });
-   
-   
-   function uservalidate() {
-   if ($('#materialFormCardEmailEx').val() == '') { 
-       $('#materialFormCardEmailEx').css('border-color', '#dc3545');
-    return false;
-     } else {
-      $('#materialFormCardEmailEx').css('border-color', '#28a745'); 
-       return true;
-   }
-   
-   };
-   
-   function passvalidate() {
-   if ($('#materialFormCardPasswordEx').val() == '') { 
-    $('#materialFormCardPasswordEx').css('border-color', '#dc3545');
-    return false;
-     } else {
-      $('#materialFormCardPasswordEx').css('border-color', '#28a745'); 
-       return true;
-   }
-   
-   };
-   
-   
-</script>
-  <script src = "jss/jquery.js"></script>
-  <script src = "jss/bootstrap.js"></script>
-  <script src = "jss/login.js"></script>
-  <script src="jquery.min.js"></script>
-<script type="text/javascript">
-  $(window).on('load', function(){
-    //you remove this timeout
-    setTimeout(function(){
-          $('#loader').fadeOut('slow');  
-      }, 1000);
-      //remove the timeout
-      //$('#loader').fadeOut('slow'); 
-  });
-</script>
 </html>
-</body>

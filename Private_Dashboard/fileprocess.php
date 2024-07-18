@@ -21,9 +21,9 @@ if (isset($_POST['save'])) { // if save button on the form is clicked
     // get display options
     $display_options = isset($_POST['display_options']) ? $_POST['display_options'] : [];
 
-    if (!in_array($extension, ['pdf', 'docx', 'jpg', 'ppsx'])) {
+    if (!in_array($extension, ['pdf', 'docx', 'jpg'])) {
         echo '<script type="text/javascript">
-                alert("Your file extension must be .pdf, .docx, ppsx, or .jpg");
+                alert("Your file extension must be .pdf, .docx, or .jpg");
                 window.location = "add_file.php";
               </script>';
     } elseif ($_FILES['myfile']['size'] > 5000000) { // file shouldn't be larger than 5 Megabytes
