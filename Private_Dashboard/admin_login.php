@@ -62,6 +62,7 @@ $query=mysqli_query($conn,"SELECT * FROM admin_login WHERE admin_user = '$userna
                  
 			  	echo "<script type='text/javascript'>document.location='dashboard.php'</script>";  
 			  }
+			  // this is the authentication part where when the user wants to access the app he cant
 	    }
    }
 ?>

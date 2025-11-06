@@ -24,7 +24,8 @@
         <tbody>
             <?php 
             require_once("include/connection.php");
-            $query = mysqli_query($conn, "SELECT * FROM upload_files") or die(mysqli_error($conn));
+            // Modified query to sort files by the year at the end of the filename
+            $query = mysqli_query($conn, "SELECT * FROM upload_files ORDER BY CAST(SUBSTRING_INDEX(NAME, ' ', -1) AS UNSIGNED) DESC") or die(mysqli_error($conn));
             while ($file = mysqli_fetch_array($query)) {
                 $display_options = !empty($file['display_options']) ? unserialize($file['display_options']) : [];
                 if (is_array($display_options) && in_array('moa', $display_options)) {
@@ -44,9 +45,11 @@
                 <td><?php echo $time; ?></td>
                 <td><?php echo $download; ?></td>
                 <td>
-                    <a href='downloads.php?file_id=<?php echo $id; ?>' class="btn btn-sm btn-outline-primary"><i class="fa fa-download"></i></a>
-                    <button class="btn btn-sm btn-outline-danger" data-id="<?php echo $id; ?>" data-toggle="modal" data-target="#deleteModal"><i class="fa fa-trash"></i></button>
-                </td>
+    <a href='view_file.php?file_id=<?php echo $id; ?>' class="btn btn-sm btn-outline-info"><i class="fa fa-eye"></i></a>
+    <a href='downloads.php?file_id=<?php echo $id; ?>' class="btn btn-sm btn-outline-primary"><i class="fa fa-download"></i></a>
+    <button class="btn btn-sm btn-outline-danger" data-id="<?php echo $id; ?>" data-toggle="modal" data-target="#deleteModal"><i class="fa fa-trash"></i></button>
+</td>
+
             </tr>
             <?php } } ?>
         </tbody>
@@ -55,7 +58,7 @@
 
 <hr>
 <div class="footer-copyright py-3">
-    <p>All right Reserved &copy; <?php echo date('Y'); ?> Developed By:Tundag & Franco</p>
+    <p>All right Reserved &copy; <?php echo date('Y'); ?> Developed By: Tundag & Franco</p>
 </div>
 
 <!-- Delete Confirmation Modal -->
@@ -106,12 +109,10 @@
 
 <?php include 'footer.php'; ?>
 
-
 <style>
 .col-md-12 {
     background-color: ;
 }
-
 </style>
 
 </body>

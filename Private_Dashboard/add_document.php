@@ -39,10 +39,12 @@
         <td><?php echo $status; ?></td>
         <td><?php echo $time; ?></td>
         <td><?php echo $download; ?></td>
-        <td>
-          <a href='downloads.php?file_id=<?php echo $id; ?>' class="btn btn-sm btn-outline-primary"><i class="fa fa-download"></i></a>
-          <button class="btn btn-sm btn-outline-danger" data-id="<?php echo $id; ?>" data-toggle="modal" data-target="#deleteModal"><i class="fa fa-trash"></i></button>
-        </td>
+          <td>
+                    <a href='view_file.php?file_id=<?php echo $id; ?>' class="btn btn-sm btn-outline-info" target="_blank">
+                    <i class="fa fa-eye"></i></a>
+                    <a href='downloads.php?file_id=<?php echo $id; ?>' class="btn btn-sm btn-outline-primary"><i class="fa fa-download"></i></a>
+                    <button class="btn btn-sm btn-outline-danger" data-id="<?php echo $id; ?>" data-toggle="modal" data-target="#deleteModal"><i class="fa fa-trash"></i></button>
+                </td>
       </tr>
       <?php } ?>
     </tbody>

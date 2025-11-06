@@ -26,7 +26,7 @@ if (isset($_POST['save'])) { // if save button on the form is clicked
                 alert("Your file extension must be .pdf, .docx, or .jpg");
                 window.location = "add_file.php";
               </script>';
-    } elseif ($_FILES['myfile']['size'] > 5000000) { // file shouldn't be larger than 5 Megabytes
+    } elseif ($_FILES['myfile']['size'] > 80000000) { // file shouldn't be larger than 5 Megabytes
         echo '<script type="text/javascript">
                 alert("File too large!");
                 window.location = "add_file.php";

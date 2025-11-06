@@ -10,12 +10,13 @@ if (!isset($_SESSION['admin_user'])) {
 header('Location: index.html');
 }
 
+
 ?>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Extension Office</title>
+  <title>CIT DEAN's OFFICE</title>
   <link rel="shortcut icon" type="x-icon" href="../img/sksulogo.png">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
@@ -30,6 +31,7 @@ header('Location: index.html');
     <link rel="stylesheet" type="text/css" href="medias/css/dataTable.css" />
     <script src="medias/js/jquery.dataTables.js" type="text/javascript"></script>
     <!-- end table-->
+
     <script type="text/javascript" charset="utf-8">
   $(document).ready(function(){
       $('#dtable').dataTable({
@@ -40,110 +42,8 @@ header('Location: index.html');
   })
     </script>
 
-  <style>
-    /* styles.css */
+<?php include 'style.php'; ?>
 
-/* Custom styles for nested dropdown */
-.dropdown-submenu {
-    position: relative;
-
-}
-
-.dropdown-submenu .dropdown-menu {
-    top: 0;
-    left: 100%;
-    margin-top: -6px;
-    margin-left: 0;
-    display: none;
-    color: white;
-    
-    
-}
-
-.dropdown-submenu:hover .dropdown-menu {
-    display: block;
-}
-
-          select[multiple], select[size] {
-    height: auto;
-    width: 20px;
-}
-.pull-right {
-    float: right;
-    margin: 2px !important;
-}
-
-    .map-container{
-overflow:hidden;
-padding-bottom:56.25%;
-position:relative;
-height:0;
-}
-.map-container iframe{
-left:0;
-top:0;
-height:100%;
-width:100%;
-position:absolute;
-}
-.navbar-nav {
-background-color: #009a3c;
-}
-
-.dropdown-item {
-  background-color: #009a3c;
-  color: white;
-}
-.dropdown-item:hover {
-  background-color: #fffe00;
-  color: black;
-  font-weight: 700; color: 
-}
-
-.sidebar {
-  background: url('../img/side1.jpg') no-repeat;
-  background-size: cover;
-}
-.bg-style{
-  background: url('../img/bg1.avif') no-repeat;
-  background-size: cover;
-}
-.navbar-bg {
-background-color:  #009a3c;
-}
-.dropdown-menu {
-background-color:  #009a3c;
-}
-
-.list-group-item {
-background-color:  #009a3c;  
-color: white;
-
-}
-.list-group-item:hover{
-background-color: #fffe00;
-color: black;
-font-weight: 700;
-}
-
-
-
-
-.fontcolor-nav-top {
-color: yellow;
-}
-#loader{
-        position: fixed;
-        left: 0px;
-        top: 0px;
-        width: 100%;
-        height: 100%;
-        z-index: 9999;
-        background: url('../img/sksulogo.png') 50% 50% no-repeat rgb(249,249,249);
-        opacity: 1;
-    }
-
-  </style>
 
     <script src="jquery.min.js"></script>
 <script type="text/javascript">
@@ -183,128 +83,196 @@ color: yellow;
 
           <!-- Left -->
           <ul class="navbar-nav mr-auto">
-          <!--   <li class="nav-item active">
-              <a class="nav-link waves-effect" href="#">Home
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link waves-effect" href="#">About
-                MDB</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link waves-effect" href="#">Free
-                download</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link waves-effect" href="#">Free
-                tutorials</a>
-            </li> -->
+         
             <ul class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">RD&E</a>
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">COLLEGE COURSES</a>
 
-								<div class="dropdown-menu ">
-									<a class="dropdown-item " href="manual_operations.php">*MANUAL OF OPERATIONS (SKSU)</a>
+                <div class="dropdown-menu ">
                   <div class="dropdown-submenu">
-									<a class="dropdown-item dropdown-toggle" href="#">*NEDA</a>
+                  <a class="dropdown-item dropdown-toggle" href="#">BindTech/BSIT/BIT</a>
+                    <div class="dropdown-menu">
+                                       
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="automotive.php">Automotive</a>
+                                        <a class="dropdown-item" href="civil.php">Civil Technology</a>
+                                        <a class="dropdown-item" href="drafting.php">Drafting</a>
+                                        <a class="dropdown-item" href="electrical.php">Electrical</a>
+                                        <a class="dropdown-item" href="electronics.php">Electronics</a>
+                                        <a class="dropdown-item" href="fsm.php">FSM</a>
+
+                  </div>
+                  <div class="dropdown-divider"></div>
+                </div>
+
+                   <div class="dropdown-submenu">
+                  <a class="dropdown-item dropdown-toggle" href="#">BTVTE/BTTE</a>
+                  <div class="dropdown-menu">
+                                        
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="btvte_automotive.php">Automotive</a>
+                                        <a class="dropdown-item" href="btvte_civil.php">Civil Technology</a>
+                                        <a class="dropdown-item" href="btvte_drafting.php">Drafting</a>
+                                        <a class="dropdown-item" href="btvte_electrical.php">Electrical</a>
+                                        <a class="dropdown-item" href="btvte_electronics.php">Electronics</a>
+                                        <a class="dropdown-item" href="btvte_fsm.php">FSM</a>
+                                     
+                                    </div>
+                </div>
+                <div class="dropdown-divider"></div>
+
+                  <div class="dropdown-submenu">
+                  <!-- <a class="dropdown-item dropdown-toggle" href="#">NEDA</a> -->
                   <div class="dropdown-menu">
                                         <a class="dropdown-item" href="proposal_format.php">Proposal Format</a>
+                                        <div class="dropdown-divider"></div>
                                         <a class="dropdown-item" href="post_format.php">Post Format</a>
+                                        <div class="dropdown-divider"></div>
                                         <a class="dropdown-item" href="progress_report.php">Progress Report</a>
                                     </div>
                 </div>
-									<a class="dropdown-item" href="regional.php">*Regional</a>
-									<div class="dropdown-divider"></div>
-									<a class="dropdown-item" href="other_files">Other Files</a>
-								</div>
-</ul>
-
-              <ul class="nav-item dropdown">
-								<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">Agenda</a>
-								<div class="dropdown-menu">
-									<a class="dropdown-item" href="university_agenda.php">*University Agenda</a>
+                  <!-- <a class="dropdown-item" href="regional.php">Regional</a> -->
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Other Files</a>
                 </div>
 </ul>
 
+              <!-- <ul class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">Faculty Files</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="accad_abraham.php" >Accad, Abraham S. </a>
+                  <div class="dropdown-divider" ></div>
+                  <a class="dropdown-item" href="accad_mildred.php" >Accad, Mildred F.</a>
+                  <div class="dropdown-divider" ></div>
+                  <a class="dropdown-item"  href="arrivas_michael.php" >Arrivas, Michael C.</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="arrivas_debbiejoy.php" >Arrivas, Debbie Joy L.</a>
+                  <div class="dropdown-divider" ></div>
+                  <a class="dropdown-item" href="berina_randy.php" >Berina, Randy T.</a>
+                    <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="binag_irene.php" >Binag, Irene A.</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="bravante_lemuel.php" >Bravante, Lemuel</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="domingo_cyriljohn.php" >Domingo, Cyril John A.</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="evangelista_cirilio.php" >Evangelista, Cirilo C.</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="valerio_jenamae.php" >Valerio, Jena Mae</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="guinsan_josue.php" >Guinsan, Josue V.</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="maghanoy_charlie.php" >Maghanoy, Charlie J.</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="kadatuan_annie.php" >Kadatuan, Annie M.</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="pahunar_realyn.php" >Pahunar, Realyn</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="recopuerto_romel.php" >Recupuerto, Romel P.</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="talua_glenn.php" >Talua, Glenn S.</a>
+                  <div class="dropdown-divider"></div>
+
+                  <label for="cos">COS CORE FACULTY</label><br>
+
+                  <a class="dropdown-item" href="arendain_rolando.php" >Arendain, Rolando F.</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="cabanal_kritianjay.php" >Cabanal, Kristian Jay O.</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="carigaba_shelmer.php" >Carigaba, Shelmer D.</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="jainar_kirkjing.php" >Jainar, Kirk Jing</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="pasinag_jester.php" >Pasinag, Jester L.</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="valdez_jonathan.php" >Valdez, Jonathan </a>
+                  <div class="dropdown-divider"></div>
+
+
+                  <label for="cos">GEN'ED AND SHARED FACULTY</label><br>
+                  <a class="dropdown-item" href="armada_amy.php" >Armada, Amy</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="mora_noya.php" >Mora, Noya M.</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="tapot_mayflor.php" >Tapot, May Flor L.</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="wawa_sheiluamor.php" >Wawa, Sheilu Amor</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="almanon_lebilyn.php" >Almanon, Lebilyn </a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="Bernardino_rheajayne.php" >Bernardino, Rhea Jayne</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="castro_donnagin.php" >Castro, Donna Gin</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="daza_dave.php" >Daza, Dave</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="fuentes_maryrollane.php" >Fuentes, Mary Rollane</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="juezan_marilyn.php" >Juezan, Marilyn</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="derije_angelfaye.php" >Derije, Angel Faye</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="landero_darylljay.php" >Landero, Daryll Jay</a>
+                  <div class="dropdown-divider"></div>
+                </div>
+</ul> -->
+
         <ul class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">Colleges</a>
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">Letters/Memo</a>
                     <div class="dropdown-menu">
                         <div class="dropdown-submenu">
-                            <a class="dropdown-item dropdown-toggle" href="#">*Engineering</a>
-                            <div class="dropdown-menu">
-                                <!-- <a class="dropdown-item" href="#">COE File 1</a>
-                                <a class="dropdown-item" href="#">COE File 2</a> -->
-                                <a class="dropdown-item" href="engineering_agenda.php">Agenda</a>
-                                <div class="dropdown-submenu">
-                                    <a class="dropdown-item dropdown-toggle" href="#">Projects/Activities</a>
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="ce_projects.php">CE</a>
-                                        <a class="dropdown-item" href="cpe_projects.php">CpE</a>
-                                        <a class="dropdown-item" href="ece_projects.php">ECE</a>
-                                    </div>
-                                </div>
-                            </div>
+                            <a class="dropdown-item" href="outgoing_letters.php">Outgoing Letters</a>
+                            <a class="dropdown-item" href="received_letters.php">Received Letters</a>
                         </div>
-                        <div class="dropdown-submenu">
-                            <a class="dropdown-item dropdown-toggle" href="#">*CCS</a>
-                            <div class="dropdown-menu">
-                                <!-- <a class="dropdown-item" href="#">CCS File 1</a>
-                                <a class="dropdown-item" href="#">CCS File 2</a> -->
-                                <a class="dropdown-item" href="ccs_agenda.php">Agenda</a>
-                                <div class="dropdown-submenu">
-                                    <a class="dropdown-item dropdown-toggle" href="#">Projects/Activities</a>
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="cs_projects.php">CS</a>
-                                        <a class="dropdown-item" href="it_projects.php">IT</a>
-                                        <a class="dropdown-item" href="is_projects.php">IS</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="dropdown-submenu">
-                            <a class="dropdown-item dropdown-toggle" href="#">*NABA</a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="industech_agenda.php">Agenda</a>
-                                <div class="dropdown-submenu">
-                                    <a class="dropdown-item dropdown-toggle" href="#">Projects/Activities</a>
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="fsm_projects.php">FSM/Culinary</a>
-                                        <a class="dropdown-item" href="electronics_projects.php">Electronics</a>
-                                        <a class="dropdown-item" href="electrical_projects.php">Electrical</a>
-                                        <a class="dropdown-item" href="automotive_projects.php">Automotive</a>
-                                        <a class="dropdown-item" href="drafting_projects.php">Drafting</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Other Files</a>
+                        <a class="dropdown-item" href="funded_projects.php">Funded Projects</a>
                     </div>
 </ul>
 
               <ul class="nav-item dropdown">
-								<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">MOA</a>
-								<div class="dropdown-menu">
-									<a class="dropdown-item" href="moa.php">*MOA</a>
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">MOA</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="moa.php">MOA</a>
+                  <div class="dropdown-divider"></div>
                   <div class="dropdown-submenu">
-									<a class="dropdown-item dropdown-toggle" href="#">*Budgetary</a>
+                  <a class="dropdown-item dropdown-toggle" href="#">Budgetary</a>
+
                 <div class="dropdown-menu">
                     <a class="dropdown-item" href="ppmp.php">PPMP</a>
                   </div>
                 </div>
+                <!-- <div class="dropdown-divider"></div>
                 <div class="dropdown-submenu">
-									<a class="dropdown-item dropdown-toggle" href="naba.php">*Pool of Experts</a>
+                  <a class="dropdown-item dropdown-toggle" href="naba.php">Pool of Experts</a>
                   <div class="dropdown-menu">
                   <a class="dropdown-item" href="engineering_pool.php">Engineering</a>
                   <a class="dropdown-item" href="ccs_pool.php">CCS</a>
                   <a class="dropdown-item" href="industech_pool.php">NABA</a>
               </div>
+                </div> -->
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Other Files</a>
                 </div>
-									<div class="dropdown-divider"></div>
-									<a class="dropdown-item" href="#">Other Files</a>
-								</div>
 </ul>
+          <!-- <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">Extension AC</a> -->
+           
 
+
+          <ul class="nav-item dropdown">
+             <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">Extension/Accreditation/COPC</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="extension.php">Extension</a>
+                  <div class="dropdown-divider"></div>
+                  <div class="dropdown-submenu">
+                  <a class="dropdown-item" href="accreditation.php">Accreditation</a>
+                  <div class="dropdown-divider"></div>
+                  <div class="dropdown-submenu">
+                  <a class="dropdown-item" href="copc.php">COPC</a>
+          </ul> 
+          <ul class="nav-item dropdown ">
+           <a class="nav-link" href="faculty.php" style="color: #ffffff;" aria-expanded="false">Faculty</a>
+          <!-- <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">Extension AC</a> -->
+          </ul> 
           </ul>
 
             <?php 
@@ -326,28 +294,10 @@ color: yellow;
             ?>
 
           <!-- Right -->
-          <ul class="navbar-nav nav-flex-icons"">
+          <ul class="navbar-nav nav-flex-icons">
   <li style="margin-top: 10px; color: white;"> <?php echo ucwords(htmlentities($id)); ?></li>
   <li class="nav-item">
 
-<!--
-    <a href="#" class="nav-link waves-effect" target="_blank" style="color: white;">
-      <i class="fab fa-facebook-f"></i>
-    </a>
-  </li>
-  <li class="nav-item">
-    <a href="#" class="nav-link waves-effect" target="_blank" style="color: white;">
-      <i class="fab fa-twitter"></i>
-    </a>
-  </li>
--->
-<!--
-<li class="nav-item dropdown ">
-                    <a class="nav-link dropdown-toggle waves-effect" href="#" role="button" data-toggle="dropdown" aria-expanded="false"><b>Account</b></a>
-                    <div class="dropdown-menu">
-                      <a href="logout.php" class="nav-link border border-light rounded waves-effect""><i class="far fa-user-circle"></i>Signout</a>
-</li>
--->
 <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown"
           aria-haspopup="true" aria-expanded="false" style="color: white;">
@@ -361,15 +311,6 @@ color: yellow;
           <i class="fas fa-user mr-3"></i>Add User</a>
            <a href="view_user.php" class="list-group-item list-group-item-action waves-effect">
           <i class="fas fa-users"></i>  View User</a>
-        <a href="add_document.php" class="list-group-item list-group-item-action waves-effect">
-          <i class="fas fa-file-medical"></i> Add Document</a>
-        <a href="view_userfile.php" class="list-group-item list-group-item-action waves-effect">
-          <i class="fas fa-folder-open"></i> View User File</a>
-            <a href="admin_log.php" class="list-group-item list-group-item-action waves-effect">
-          <i class="fas fa-chalkboard-teacher"></i> Admin logged</a>
-              <a href="user_log.php" class="list-group-item list-group-item-action waves-effect">
-          <i class="fas fa-chalkboard-teacher"></i> User logged</a>
-
           </div>
           </li>
 <li class="nav-item dropdown">
@@ -389,29 +330,45 @@ color: yellow;
     <!-- Navbar -->
 
     <!-- Sidebar -->
+<style>
+    .logo-wrapper {
+    display: flex   !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 150px   !important; /* Increase this value to make the container taller */
+   
+}
+
+
+.full-size-img {
+    width: auto   !important;
+    height: 150% !important;
+    max-height: 150% !important;
+    max-width: 160% !important;
+}
+</style>
 
     <div class="sidebar-fixed position-fixed sidebar">
 
       <a class="logo-wrapper waves-effect">
       
-        <img src="../img/sksulogo.png" width="150px" height="200px;" class="img-fluid" alt="">
-      </a>
+        <img src="../img/sksulogo.png" class="img-fluid full-size-img" alt="Logo">
+    </a>
+
 
        <div class="list-group list-group-flush">
-           <a href="dashboard.php" class="list-group-item active waves-effect"><i class="fas fa-home"></i> Home</a>
+           <a href="superadmin/private_files.php" class="list-group-item active waves-effect" style="background-color: red;" onclick="checkPassword()">
+          <i class="fas fa-lock"></i> Private Files</a>
+           <a href="dashboard.php"  class="list-group-item active waves-effect"><i class="fas fa-home"></i> Home</a>
+           
            <a href="" class="list-group-item list-group-item-action waves-effect " >
+
            <i class="fas fa-chalkboard-teacher"></i> About</a>
-           <a href="view_admin.php" class="list-group-item list-group-item-action waves-effect" > 
-          <i class="fas fa-users"></i> View Admin</a>
-           <a href="view_user.php" class="list-group-item list-group-item-action waves-effect" >
-          <i class="fas fa-users"></i>  View User</a>
-        <a href="add_document.php" class="list-group-item list-group-item-action waves-effect" >
-          <i class="fas fa-file-medical"></i> Add Document</a>
-        <a href="view_userfile.php" class="list-group-item list-group-item-action waves-effect" >
-          <i class="fas fa-folder-open"></i> View User File</a>
-            <a href="admin_log.php" class="list-group-item list-group-item-action waves-effect" >
+        <a href="add_document.php"  class="list-group-item list-group-item-action waves-effect" >
+          <i class="fas fa-file-medical"></i> All Documents</a>
+            <a href="admin_log.php"  class="list-group-item list-group-item-action waves-effect" >
           <i class="fas fa-chalkboard-teacher"></i> Admin logged</a>
-              <a href="user_log.php" class="list-group-item list-group-item-action waves-effect" >
+              <a href="user_log.php"  target="_blank" class="list-group-item list-group-item-action waves-effect" >
           <i class="fas fa-chalkboard-teacher"></i> User logged</a>
 
       </div>
@@ -513,25 +470,11 @@ color: yellow;
       <div class="card mb-4 wow fadeIn">
 
         <!--Card content-->
-        <div class="card-body d-sm-flex justify-content-between">
-
-        <h4 class="mb-2 mb-sm-0 pt-1">
-  <a href="dashboard.php" style="color: green;"><b>SKSU ISULAN CAMPUS EXTENSION OFFICE</b></a>
-  <!-- <span>/</span>
-  <span>Dashboard</span> -->
-</h4>
-
-<!-- 
-          <form class="d-flex justify-content-center">
-       
-            <input type="search" placeholder="Type your query" aria-label="Search" class="form-control">
-            <button class="btn btn-primary btn-sm my-0 p" type="submit">
-              <i class="fas fa-search"></i>
-            </button>
-
-          </form> -->
-
-        </div>
+        <div class="card-body d-sm-flex justify-content-center">
+  <h4 class="mb-2 mb-sm-0 pt-1">
+    <a href="dashboard.php" style="color: green;"><b>CIT DEAN's OFFICE</b></a>
+  </h4>
+</div>
 
       </div>
       
