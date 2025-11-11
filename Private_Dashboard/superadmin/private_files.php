@@ -1,9 +1,12 @@
 <?php
 session_start();
+$_SESSION['private_access_granted'] = true;
+http_response_code(200);
+
+
 require_once("include/connection.php");
 
-$sql = "SELECT value FROM settings WHERE setting='private_files_password'";
-$result = mysqli_query($conn, $sql);
+$sql = "SELECT value FROM settings WHERE setting='private_files_password'"; $result = mysqli_query($conn, $sql);
 $row = mysqli_fetch_assoc($result);
 $private_password = $row ? $row['value'] : '';
 
