@@ -132,7 +132,8 @@ header('Location: index.html');
                 </div>
                   <!-- <a class="dropdown-item" href="regional.php">Regional</a> -->
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Other Files</a>
+                  <a class="dropdown-item" href="#">Private Files</a>
+
                 </div>
 </ul>
 

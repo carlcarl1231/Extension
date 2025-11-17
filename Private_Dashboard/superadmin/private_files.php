@@ -1,8 +1,9 @@
 <?php
 session_start();
-$_SESSION['private_access_granted'] = true;
-http_response_code(200);
-
+unset($_SESSION['private_access_granted']);
+header("Cache-Control: no-cache, no-store, must-revalidate");
+header("Pragma: no-cache");
+header("Expires: 0");
 
 require_once("include/connection.php");
 
@@ -14,7 +15,7 @@ if (isset($_GET['logout'])) {
     unset($_SESSION['private_access_granted']);
     header("Location: private_files.php");
     exit();
-}
+} 
 ?>
 <!DOCTYPE html>
 <html>
@@ -231,6 +232,23 @@ if (isset($_GET['logout'])) {
             }
         }
     });
+
+    document.addEventListener("visibilitychange", function () {
+    if (document.hidden) {
+        // When user leaves the tab, lock session
+        $_SESSION['private_access_granted'] = false;
+    } else {
+        // When user comes back, force re-auth
+        document.getElementById("mainContent").style.display = "none";
+        document.getElementById("passwordModal").style.display = "flex";
+
+        // Clear input + hide error
+        const passInput = document.getElementById("passwordInput");
+        passInput.value = "";
+        document.getElementById("errorMsg").style.display = "none";
+    }
+});
+
 </script>
 </body>
 </html>
