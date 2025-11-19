@@ -2,12 +2,12 @@
 // connect to the database
 session_start();
 require_once("./include/connection.php");
-require_once ("include/helpers.php");
+require_once ("./include/helpers.php");
 
 $csrf = new CSRF();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['save'])) {
-    if (!$csrf->verify($_POST['csrf_token'])) {
+    if (!$csrf->verify($_POST['csrf_token_hash'])) {
         die("CSRF validation failed.");
     }
     $csrf->refresh(); // generate new token after successful check
