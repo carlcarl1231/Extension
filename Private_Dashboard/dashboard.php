@@ -107,10 +107,13 @@
   }));
 
   // Limit to first 20 files
+  usort($files, function($a, $b) use ($uploadDir) {
+    return filemtime($uploadDir . $b) - filemtime($uploadDir . $a);
+  });
+
   $filesToShow = array_slice($files, 0, $maxFilesToShow);
 
   // Display files
-  echo "<h2>First $maxFilesToShow Files from Uploads Folder</h2>";
   foreach ($filesToShow as $file) {
     echo "<p>$file</p>";
 }

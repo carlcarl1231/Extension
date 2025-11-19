@@ -1,15 +1,36 @@
 <?php
 session_start();
 unset($_SESSION['private_access_granted']);
-header("Cache-Control: no-cache, no-store, must-revalidate");
-header("Pragma: no-cache");
-header("Expires: 0");
+// header("Cache-Control: no-cache, no-store, must-revalidate");
+// header("Pragma: no-cache");
+// header("Expires: 0");
 
-require_once("include/connection.php");
+require_once 'include/connection.php';
+require_once 'include/helpers.php';
 
-$sql = "SELECT value FROM settings WHERE setting='private_files_password'"; $result = mysqli_query($conn, $sql);
+$csrf = new CSRF();
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['save'])) {
+    if (!$csrf->verify($_POST['csrf_token'])) {
+        die("CSRF validation failed.");
+    } 
+}
+
+
+$sql = "SELECT value FROM settings WHERE setting = 'private_files_password'";
+$result = mysqli_query($conn, $sql);
 $row = mysqli_fetch_assoc($result);
+
 $private_password = $row ? $row['value'] : '';
+$entered = $_POST['password'] ?? '';
+$correct = $private_password;
+if ($entered === $correct) {
+    $_SESSION['private_access_granted']= true;
+    echo "OK";
+} else {
+    echo "NO";
+}
+
 
 if (isset($_GET['logout'])) {
     unset($_SESSION['private_access_granted']);
@@ -90,9 +111,12 @@ if (isset($_GET['logout'])) {
 <div id="passwordModal">
     <div id="passwordBox">
         <h2>Enter Password</h2>
+        <form method="POST" id='passwordForm' >
+            <?php echo $csrf->input(); ?>
         <input type="password" id="passwordInput" placeholder="Password">
         <br>
         <button id="submitPassword">Submit</button>
+        </form>
         <div id="errorMsg">Incorrect password. Try again.</div>
     </div>
 </div>
@@ -189,24 +213,31 @@ if (isset($_GET['logout'])) {
 
 <script>
     const correctPassword = "<?= $private_password ?>";
+document.getElementById("submitPassword")?.addEventListener("click", function(e) {
+    e.preventDefault();
 
-    document.getElementById("submitPassword")?.addEventListener("click", function () {
-        const entered = document.getElementById("passwordInput").value;
-        if (entered === correctPassword) {
-            // Store access session by calling PHP backend
-            fetch("grant_access.php", { method: "POST" })
-                .then(() => {
-                    // Hide modal and show content
-                    document.getElementById("passwordModal").style.display = "none";
-                    document.getElementById("mainContent").style.display = "block";
-                    if (!$.fn.DataTable.isDataTable('#dtable')) {
-                        $('#dtable').DataTable({ responsive: true });
-                    }
-                });
+    const entered = document.getElementById("passwordInput").value;
+
+    fetch("grant_access.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: "password=" + encodeURIComponent(entered)
+    })
+    .then(response => response.text())
+    .then(result => {
+        if (result.trim() === "OK") {
+            document.getElementById("passwordModal").style.display = "none";
+            document.getElementById("mainContent").style.display = "block";
+
+            if (!$.fn.DataTable.isDataTable('#dtable')) {
+                $('#dtable').DataTable({ responsive: true });
+            }
         } else {
             document.getElementById("errorMsg").style.display = "block";
         }
-    });
+    })
+    .catch(err => console.error(err));
+});
 
     document.getElementById("passwordInput")?.addEventListener("keypress", function (e) {
         if (e.key === "Enter") {

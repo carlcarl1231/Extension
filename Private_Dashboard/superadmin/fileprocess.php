@@ -1,7 +1,17 @@
 <?php
 // connect to the database
+session_start();
 require_once("./include/connection.php");
+require_once ("include/helpers.php");
 
+$csrf = new CSRF();
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['save'])) {
+    if (!$csrf->verify($_POST['csrf_token'])) {
+        die("CSRF validation failed.");
+    }
+    $csrf->refresh(); // generate new token after successful check
+}
 // Uploads files
 if (isset($_POST['save'])) { // if save button on the form is clicked
     // name of the uploaded file
@@ -54,10 +64,11 @@ $time = date("Y-m-d H:i:s"); // Save in correct format for sorting
                 $sql = "INSERT INTO private_files (name, size, download, timers, admin_status, email, display_options) 
                         VALUES ('$filename', $size, 0, '$time', 'Admin', '$user', '$display_options_serialized')";
                 if (mysqli_query($conn, $sql)) {
-                    echo '<script type="text/javascript">
-                            alert("File uploaded successfully");
-                            window.location = "private_files.php";
-                          </script>';
+
+                    $_SESSION['private_access_granted']=true;
+
+                    header("Location: private_files.php");
+                    exit();
                 }
             } else {
                 echo '<script type="text/javascript">

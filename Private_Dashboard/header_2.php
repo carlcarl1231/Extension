@@ -254,7 +254,15 @@ $path = str_replace($_SERVER['DOCUMENT_ROOT'], '', __DIR__ . '/../img/sksulogo.p
                 </div>
           </ul>
           <ul class="nav-item dropdown">
-           <a class="nav-link" href="extension.php" style="color: #ffffff;" aria-expanded="false">Extension AC</a>
+             <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">Extension/Accreditation/COPC</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="extension.php">Extension</a>
+                  <div class="dropdown-divider"></div>
+                  <div class="dropdown-submenu">
+                  <a class="dropdown-item" href="accreditation.php">Accreditation</a>
+                  <div class="dropdown-divider"></div>
+                  <div class="dropdown-submenu">
+                  <a class="dropdown-item" href="copc.php">COPC</a>
           </ul> 
 
           <ul class="nav-item dropdown">

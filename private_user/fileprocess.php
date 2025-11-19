@@ -24,7 +24,7 @@ if (isset($_POST['save'])) { // if save button on the form is clicked
 
     if (!in_array($extension, ['pdf'])) {
         echo '<script type = "text/javascript">
-                    alert("You file extension must be:  .pdf");
+                    alert("Your file extension must be:  .pdf");
                     window.location = "add_file.php";
                 </script>
 ';
