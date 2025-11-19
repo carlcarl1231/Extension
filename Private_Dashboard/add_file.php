@@ -1,4 +1,9 @@
-<?php include 'header.php'; ?>
+<?php include 'header.php'; 
+      require 'include/helpers.php';
+      
+      $csrf = new CSRF();
+
+?>
 <hr>
 <div class="container">
     <div class="row">
@@ -9,6 +14,7 @@
                 </h5>
                 <div class="card-body px-lg-5 pt-0">
                     <form action="fileprocess.php" method="post" enctype="multipart/form-data">
+                      <?php echo $csrf->input(); ?>
                         <div class="col-md-11">
                         </div>
                         <!-- <div class="md-form mb-0">

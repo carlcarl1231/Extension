@@ -2,6 +2,10 @@
 <html lang="en">
 <?php
 session_start();
+
+  require_once 'include/helpers.php';
+
+  $csrf = new CSRF();
 if (!isset($_SESSION["email_address"])) {
     header("location:../login.html");
     exit();
@@ -135,6 +139,7 @@ if (!isset($_SESSION["email_address"])) {
             <div class="container">
               <div class="row"><br>
                 <form action="add_file.php" method="post" enctype="multipart/form-data">
+                  <?php echo $csrf->input(); ?>
                   <div class="col-md-11">
                     <div class="md-form mb-0">
                       <input type="hidden" name="uploader" value="<?php echo ucwords(htmlentities($name)); ?>" class="form-control" readonly="">
