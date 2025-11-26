@@ -118,6 +118,7 @@ while ($row = mysqli_fetch_assoc($result)) {
                         <input type="checkbox" name="display_options[]" value="extension"> Extension<br>
                         <input type="checkbox" name="display_options[]" value="accreditation"> Accreditation<br>
                         <input type="checkbox" name="display_options[]" value="copc"> COPC<br>
+                        <input type="checkbox" name="display_options[]" value="others"> Other Files<br>
                                                 <button type="submit" class="btn btn-info btn-rounded btn-block my-4 waves-effect z-depth-0" name="save">UPLOAD</button>
                         <footer style="font-size: 12px"><b>File Type:</b><font color="red"><i> .pdf, .docx, .jpg</i></font></footer>
                     </form>

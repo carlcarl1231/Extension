@@ -251,7 +251,7 @@ header('Location: index.html');
               </div>
                 </div> -->
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Other Files</a>
+                  <a class="dropdown-item" href="others.php">Other Files</a>
                 </div>
 </ul>
           <!-- <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">Extension AC</a> -->

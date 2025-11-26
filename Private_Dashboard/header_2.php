@@ -137,7 +137,7 @@ $path = str_replace($_SERVER['DOCUMENT_ROOT'], '', __DIR__ . '/../img/sksulogo.p
                 </div>
                   <!-- <a class="dropdown-item" href="regional.php">Regional</a> -->
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Other Files</a>
+                  <a class="dropdown-item" href="others.php">Other Files</a>
                 </div>
 </ul>
 
