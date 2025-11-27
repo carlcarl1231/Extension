@@ -97,7 +97,7 @@ if (isset($_GET['id'])) {
 
               $id = intval($_GET['id']);
               $nameParts = explode(" ", trim($full_name));
-              $nameParts = array_values(array_filter($nameParts)); // clean up spaces
+              $nameParts = array_values(array_filter($nameParts)); 
 
               $firstNameParts = [];
               $lastName = strtolower(end($nameParts)); // Always last word = Lastname

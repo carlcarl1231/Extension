@@ -15,7 +15,7 @@ header('Location: index.html');
 <head>
   <?php
 // Build the path relative to htdocs
-$path = str_replace($_SERVER['DOCUMENT_ROOT'], '', __DIR__ . '/../img/sksulogo.png');
+$path = str_replace($_SERVER['DOCUMENT_ROOT'], '', __DIR__ . '/../img/aaa.png');
 ?>
 
   <meta charset="utf-8">
@@ -327,28 +327,67 @@ $path = str_replace($_SERVER['DOCUMENT_ROOT'], '', __DIR__ . '/../img/sksulogo.p
 
     <!-- Sidebar -->
 <style>
-    .logo-wrapper {
-    display: flex   !important;
-    justify-content: center !important;
-    align-items: center !important;
-    height: 150px   !important; /* Increase this value to make the container taller */
-   
+   /* Top-level nav link hover */
+.navbar-nav .nav-link {
+    position: relative;
+    color: #fff;
+    transition: color 0.3s ease;
 }
 
-
-.full-size-img {
-    width: auto   !important;
-    height: 150% !important;
-    max-height: 150% !important;
-    max-width: 160% !important;
+/* Hover underline animation */
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #00ffff; /* highlight color */
+    transition: width 0.3s;
 }
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link:focus::after {
+    width: 100%;
+}
+
+/* Change color on hover */
+.navbar-nav .nav-link:hover {
+    color: #00ffff; /* text highlight */
+}
+
+/* Dropdown items hover effect */
+.dropdown-menu .dropdown-item {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #00ffff; /* cyan highlight */
+    color: black; /* readable text */
+}
+
+.nav-link dropdown-toggle .nav-link dropdown-toggle:hover {
+    background-color: #00ffff; /* cyan highlight */
+    color: black; /* readable text */
+}
+/* Optional: active dropdown indicator for open menu */
+.nav-item.show > .nav-link,
+.nav-link dropdown-toggle > .nav-link,
+.nav-item.show > .nav-link:hover {
+    color: #00ffff;
+}
+
+.nav-item.show > .nav-link::after {
+    width: 100%; /* keeps underline when dropdown is open */
+}
+
 </style>
 
     <div class="sidebar-fixed position-fixed sidebar">
 
       <a class="logo-wrapper waves-effect">
       
-        <img src="../img/sksulogo.png" class="img-fluid full-size-img" alt="Logo">
+        <img src="../img/aaa.png" class="img-fluid full-size-img" alt="Logo">
     </a>
 
 

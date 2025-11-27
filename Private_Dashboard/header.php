@@ -17,7 +17,7 @@ header('Location: index.html');
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>CIT DEAN's OFFICE</title>
-  <link rel="shortcut icon" type="x-icon" href="../img/sksulogo.png">
+  <link rel="shortcut icon" type="x-icon" href="../img/a.png">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
   <!-- Bootstrap core CSS -->
@@ -136,86 +136,6 @@ header('Location: index.html');
                 </div>
 </ul>
 
-              <!-- <ul class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">Faculty Files</a>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="accad_abraham.php" >Accad, Abraham S. </a>
-                  <div class="dropdown-divider" ></div>
-                  <a class="dropdown-item" href="accad_mildred.php" >Accad, Mildred F.</a>
-                  <div class="dropdown-divider" ></div>
-                  <a class="dropdown-item"  href="arrivas_michael.php" >Arrivas, Michael C.</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="arrivas_debbiejoy.php" >Arrivas, Debbie Joy L.</a>
-                  <div class="dropdown-divider" ></div>
-                  <a class="dropdown-item" href="berina_randy.php" >Berina, Randy T.</a>
-                    <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="binag_irene.php" >Binag, Irene A.</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="bravante_lemuel.php" >Bravante, Lemuel</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="domingo_cyriljohn.php" >Domingo, Cyril John A.</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="evangelista_cirilio.php" >Evangelista, Cirilo C.</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="valerio_jenamae.php" >Valerio, Jena Mae</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="guinsan_josue.php" >Guinsan, Josue V.</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="maghanoy_charlie.php" >Maghanoy, Charlie J.</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="kadatuan_annie.php" >Kadatuan, Annie M.</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="pahunar_realyn.php" >Pahunar, Realyn</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="recopuerto_romel.php" >Recupuerto, Romel P.</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="talua_glenn.php" >Talua, Glenn S.</a>
-                  <div class="dropdown-divider"></div>
-
-                  <label for="cos">COS CORE FACULTY</label><br>
-
-                  <a class="dropdown-item" href="arendain_rolando.php" >Arendain, Rolando F.</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="cabanal_kritianjay.php" >Cabanal, Kristian Jay O.</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="carigaba_shelmer.php" >Carigaba, Shelmer D.</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="jainar_kirkjing.php" >Jainar, Kirk Jing</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="pasinag_jester.php" >Pasinag, Jester L.</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="valdez_jonathan.php" >Valdez, Jonathan </a>
-                  <div class="dropdown-divider"></div>
-
-
-                  <label for="cos">GEN'ED AND SHARED FACULTY</label><br>
-                  <a class="dropdown-item" href="armada_amy.php" >Armada, Amy</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="mora_noya.php" >Mora, Noya M.</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="tapot_mayflor.php" >Tapot, May Flor L.</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="wawa_sheiluamor.php" >Wawa, Sheilu Amor</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="almanon_lebilyn.php" >Almanon, Lebilyn </a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="Bernardino_rheajayne.php" >Bernardino, Rhea Jayne</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="castro_donnagin.php" >Castro, Donna Gin</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="daza_dave.php" >Daza, Dave</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="fuentes_maryrollane.php" >Fuentes, Mary Rollane</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="juezan_marilyn.php" >Juezan, Marilyn</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="derije_angelfaye.php" >Derije, Angel Faye</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="landero_darylljay.php" >Landero, Daryll Jay</a>
-                  <div class="dropdown-divider"></div>
-                </div>
-</ul> -->
-
         <ul class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">Letters/Memo</a>
                     <div class="dropdown-menu">
@@ -241,20 +161,10 @@ header('Location: index.html');
                     <a class="dropdown-item" href="ppmp.php">PPMP</a>
                   </div>
                 </div>
-                <!-- <div class="dropdown-divider"></div>
-                <div class="dropdown-submenu">
-                  <a class="dropdown-item dropdown-toggle" href="naba.php">Pool of Experts</a>
-                  <div class="dropdown-menu">
-                  <a class="dropdown-item" href="engineering_pool.php">Engineering</a>
-                  <a class="dropdown-item" href="ccs_pool.php">CCS</a>
-                  <a class="dropdown-item" href="industech_pool.php">NABA</a>
-              </div>
-                </div> -->
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item" href="others.php">Other Files</a>
                 </div>
 </ul>
-          <!-- <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">Extension AC</a> -->
            
 
 
@@ -331,28 +241,67 @@ header('Location: index.html');
 
     <!-- Sidebar -->
 <style>
-    .logo-wrapper {
-    display: flex   !important;
-    justify-content: center !important;
-    align-items: center !important;
-    height: 150px   !important; /* Increase this value to make the container taller */
-   
+  /* Top-level nav link hover */
+.navbar-nav .nav-link {
+    position: relative;
+    color: #fff;
+    transition: color 0.3s ease;
 }
 
-
-.full-size-img {
-    width: auto   !important;
-    height: 150% !important;
-    max-height: 150% !important;
-    max-width: 160% !important;
+/* Hover underline animation */
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #00ffff; /* highlight color */
+    transition: width 0.3s;
 }
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link:focus::after {
+    width: 100%;
+}
+
+/* Change color on hover */
+.navbar-nav .nav-link:hover {
+    color: #00ffff; /* text highlight */
+}
+
+/* Dropdown items hover effect */
+.dropdown-menu .dropdown-item {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #00ffff; /* cyan highlight */
+    color: black; /* readable text */
+}
+
+.nav-link dropdown-toggle .nav-link dropdown-toggle:hover {
+    background-color: #00ffff; /* cyan highlight */
+    color: black; /* readable text */
+}
+/* Optional: active dropdown indicator for open menu */
+.nav-item.show > .nav-link,
+.nav-link dropdown-toggle > .nav-link,
+.nav-item.show > .nav-link:hover {
+    color: #00ffff;
+}
+
+.nav-item.show > .nav-link::after {
+    width: 100%; /* keeps underline when dropdown is open */
+}
+
 </style>
 
     <div class="sidebar-fixed position-fixed sidebar">
 
       <a class="logo-wrapper waves-effect">
       
-        <img src="../img/sksulogo.png" class="img-fluid full-size-img" alt="Logo">
+        <img src="../img/aaa.png" class="img-fluid full-size-img" alt="Logo">
     </a>
 
 
